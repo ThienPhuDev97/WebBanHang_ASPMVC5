@@ -1,0 +1,36 @@
+﻿@model PagedList.IPagedList<WebShop_Auth.Models.Product>
+@using PagedList.Mvc
+@using PagedList
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="row">
+       
+        <div class="col-md-8">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <th>ID</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th></th>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.ProductName</td>
+                            <td>@item.Price</td>
+                            <td>@item.Qty</td>
+                            <td>@Html.ActionLink("Add To Cart", "AddToCart", new { id = item.Id, qty = 1 })</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @Html.PagedListPager(Model, i => Url.Action("Index", new { i }))
+        </div>
+

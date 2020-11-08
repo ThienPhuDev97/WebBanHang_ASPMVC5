@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="WebShopDB-Web.config Connection String" description="WebShopDB Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:webdemo02.database.windows.net,1433;Initial Catalog=WebShop;Persist Security Info=False;User ID=admin02;Password=Phudepzai@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\asp\.net\\WEBSHOP_ASP\\WebShop_Auth\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WebShopDB']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/TemPlate.cshtml";
+    WebShop_Auth.Models.Cart cart = Session["Cart"] != null ? (WebShop_Auth.Models.Cart)Session["Cart"] : new WebShop_Auth.Models.Cart();
+}
+
+
+@if (cart.CartItems.Count > 0)
+{
+    <section id="cart_items">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Cart Detail</li>
+                </ol>
+            </div>
+            <div class="table-responsive cart_info">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr class="cart_menu">
+                            <td class="image">Item</td>
+                            <td class="description"></td>
+                            <td class="price">Price</td>
+                            <td class="quantity">Quantity</td>
+                            <td class="total">Total</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in cart.CartItems)
+                        {
+                            <tr>
+                                <td class="cart_product">
+                                    <a href=""><img src="@item.Product.ImageProduct" alt=""></a>
+                                </td>
+                                <td class="cart_description">
+                                    <h4><a href="">@item.Product.ProductName</a></h4>
+                                    <p>Web ID: 1089772</p>
+                                </td>
+                                <td class="cart_price">
+                                    <p>$@item.Product.Price</p>
+                                </td>
+                                <td class="cart_quantity">
+                                    <div class="cart_quantity_button">
+                                        @*<a class="cart_quantity_up" href=""> + </a>*@
+                                        <a href="javascript:void(0);" onclick="ChangeQty(@item.Product.Id,1)" class="cart_quantity_up">+</a>
+                                        <input onkeypress="UpdateQty(this,@item.Product.Id)" type="number" id="qty-@item.Product.Id" class="cart_quantity_input"  name="quantity" value="@item.Quantity" autocomplete="off" size="2">
+                                        @*<a class="cart_quantity_down" href=""> - </a>*@
+                                        <a href="javascript:void(0);" onclick="ChangeQty(@item.Product.Id,-1)" class="cart_quantity_down">-</a>
+                                    </div>
+                                </td>
+                                <td class="cart_total">
+                                    <p class="cart_total_price">@item.Total</p>
+                                </td>
+                                <td class="cart_delete">
+                                    @*<a class="cart_quantity_delete" href="">Remove</a>*@
+                                    @Html.ActionLink("Remove", "RemoveItem", new { id = item.Product.Id },new { @class = "cart_quantity_delete" })
+                                </td>
+                            </tr>
+                        }
+
+
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="text-right" colspan="5">
+                                Grand Total: <span id="grandtotal">@cart.GrandTotal</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right" colspan="5">
+                                @Html.ActionLink("Checkout", "Checkout")
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <p>Không có sản phẩm nào trong giỏ hàng</p>
+}
+

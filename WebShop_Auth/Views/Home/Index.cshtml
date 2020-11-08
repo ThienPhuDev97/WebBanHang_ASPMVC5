@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    WebShop_Auth.Models.Cart cart = (WebShop_Auth.Models.Cart)Session["Cart"] != null ? (WebShop_Auth.Models.Cart)Session["Cart"] : new WebShop_Auth.Models.Cart();
+}
+@model PagedList.IPagedList<WebShop_Auth.Models.Product>
+@using PagedList.Mvc
+@using PagedList
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<h1> Hien tai co @cart.CartItems.Count san pham trong gio hang</h1>
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+        {
+            <input type="text" id="search" name="search" required placeholder="Enter product name ..."/>
+            <input type="submit" name="Submit" value="Search" onclick="find()"/>
+        }
+    </div>
+    <div class="col-md-8">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <th>ID</th>
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th></th>
+            </thead>
+            <tbody id="dataProduct">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.ProductName</td>
+                        <td>@item.Price</td>
+                        <td>@item.Qty</td>
+                        <td>@Html.ActionLink("Add To Cart", "AddToCart", new { id = item.Id, qty = 1 })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @Html.PagedListPager(Model,i=>Url.Action("Index",new {i}) )
+    </div>

@@ -1,0 +1,173 @@
+﻿
+
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated) // nếu đã đăng nhập
+{
+
+
+
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="header__top__left">
+                            <p>Free shipping, 30-day return or refund guarantee.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header__top__right">
+
+                            @*<div class="header__top__hover">
+            <span> @User.Identity.GetUserName() <i class="arrow_carrot-down"></i></span>
+            @Html.AntiForgeryToken()
+            <ul>
+                <li>Account Setting</li>
+                <li onclick="LogOut()">LogOut</li>
+                <li>USD</li>
+            </ul>
+        </div>*@
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                            {
+                            @Html.AntiForgeryToken()
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                </li>
+                                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                            </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="/Asset/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active">@Html.ActionLink("Home", "Index", "HomeShop")</li>
+                            @*<li><a href="~/HomeShop/Shop">Shop</a></li>*@
+                            <li>@Html.ActionLink("Shop", "Shop", "HomeShop")</li>
+                            <li>
+                                <a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">About Us</a></li>
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li>@Html.ActionLink("ShopCart", "ShopCart", "HomeShop")</li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#" class="search-switch"><img src="/Asset/img/icon/search.png" alt=""></a>
+                        <a href="#"><img src="/Asset/img/icon/heart.png" alt=""></a>
+
+                        <a href="~/HomeShop/ShopCart">
+                            <img src="/Asset/img/icon/cart.png" alt="">
+                            <span>0</span>
+                        </a>
+
+
+
+                        <div class="price"><i class="fas fa-user-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+}
+else
+{
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="header__top__left">
+                            <p>Free shipping, 30-day return or refund guarantee.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header__top__right">
+                            <div class="header__top__links">
+                                @Html.ActionLink("Sign In", "Login2", "Account")
+                                @*<a href="#">Sign in</a>*@
+                                <a href="#">FAQs</a>
+                            </div>
+                            <div class="header__top__hover">
+                                <span>Usd <i class="arrow_carrot-down"></i></span>
+                                <ul>
+                                    <li>USD</li>
+                                    <li>EUR</li>
+                                    <li>USD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="/Asset/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active">@Html.ActionLink("Home", "Index", "HomeShop")</li>
+                            @*<li><a href="~/HomeShop/Shop">Shop</a></li>*@
+                            <li>@Html.ActionLink("Shop", "Shop", "HomeShop")</li>
+                            <li>
+                                <a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">About Us</a></li>
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li>@Html.ActionLink("ShopCart", "ShopCart", "HomeShop")</li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#" class="search-switch"><img src="/Asset/img/icon/search.png" alt=""></a>
+                        <a href="#"><img src="/Asset/img/icon/heart.png" alt=""></a>
+
+                        <a href="~/HomeShop/ShopCart">
+                            <img src="/Asset/img/icon/cart.png" alt="">
+                            <span>0</span>
+                        </a>
+
+
+
+                        <div class="price"><i class="fas fa-user-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+}
+

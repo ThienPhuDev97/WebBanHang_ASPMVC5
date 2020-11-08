@@ -1,0 +1,245 @@
+﻿
+@{
+    ViewBag.Title = "ShopDetail";
+    Layout = "~/Views/Shared/TemPlate.cshtml";
+}
+
+    <section id="cart_items">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Product Detail</li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="imageProduct_detail">
+                        <img src="/Asset/img/shop-details/thumb-1.png" alt="" style="max-width: 100%;height: auto;">
+
+                    </div>
+                    <div class="imageProduct_detail">
+                        <img src="/Asset/img/shop-details/thumb-2.png" alt="" style="max-width: 100%; height: auto;">
+
+                    </div>
+                    <div class="imageProduct_detail">
+                        <img src="/Asset/img/shop-details/thumb-3.png" alt="" style="max-width: 100%; height: auto;">
+
+                    </div>
+                    <div class="imageProduct_detail">
+                        <img src="/Asset/img/shop-details/thumb-4.png" alt="" style="max-width: 100%; height: auto;">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/Asset/img/shop-details/product-big-2.png" alt="" style="max-width: 100%;
+  height: auto;">
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <h3>Hooded thermal anora</h3><br />
+                        <p>$270.00</p><br />
+                        <div class="product__details__option__size">
+                            <span>Size:</span>
+
+                            <label class="active" for="xl">
+                                xl
+                                <input type="radio" id="xl">
+                            </label>
+                            <label for="l">
+                                l
+                                <input type="radio" id="l">
+                            </label>
+                            <label for="sm">
+                                s
+                                <input type="radio" id="sm">
+                            </label>
+                        </div>
+                        <button class="btn" style="margin-top:15px;">
+                            @Html.ActionLink("Add To Cart", "AddToCart")
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="nav nav-tabs" style="margin-top:30px" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Customer Preview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Additional information</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p style="font-weight:bold">
+                            Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.
+                        </p>
+
+                        <h4 style="font-weight:bold">Products Infomation</h4>
+                        A Pocket PC is a handheld computer, which features many of the same capabilities as a modern PC. These handy little devices allow individuals to retrieve and store e-mail messages, create a contact file, coordinate appointments, surf the internet, exchange text messages and more. Every product that is labeled as a Pocket PC must be accompanied with specific software to operate the unit and must feature a touchscreen and touchpad.
+
+                        As is the case with any new technology product, the cost of a Pocket PC was substantial during it’s early release. For approximately $700.00, consumers could purchase one of top-of-the-line Pocket PCs in 2003. These days, customers are finding that prices have become much more reasonable now that the newness is wearing off. For approximately $350.00, a new Pocket PC can now be purchased.
+
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="related-title">Related Product</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg" style="background-image: url(&quot;img/product/product-1.jpg&quot;);">
+                            <span class="label">New</span>
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRvIAAABXRUJQVlA4TOYAAAAvEcADEMeiIG0DJv5d74iIUNu2jZw8ybm/uurIJm3onKR3aCBBdOMUKbnwAbqGCV8gHqjDgugkaYNQ4tDU/yl3+wK9sRcKMKGUAGIk26atebZt27bt9/3zD+UyhYj+E0zSrPkM2AuTUzcMzvphUfUCkddXI7/+Tcc/HsXK7SeJ8TZ1gLb0/9ezgK797cv+uABIlTUAumO900elwnZYU1vm2RqprTpP/MWUuT9zDN4+JabV3oB5efUoGL8CgG0nXOYzBIBzL1wqCtLv7kGwzT7kwLZ8R52bVxClrOPP88WPcvrmwIkkAA==" alt="" data-pagespeed-url-hash="935450538" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                                <li><a href="#"><img src="img/icon/xcompare.png.pagespeed.ic.GK5tdZIxpZ.webp" alt="" data-pagespeed-url-hash="3485206841" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRtQAAABXRUJQVlA4TMgAAAAvDwAEEF8CEIT/bhERDNu2cRw8yb77XtIAFbAAEk6x+0l1EPCaAq/AErsSoNgpSlGHKkBA6YNJUJGSIACHkWSb1jx/6+Hbtm0r/4ieUojo/wQAWn5+uaxKYZyT+9egkG/fr5ZD/DmJAAS6Xx2QtwsJ585Zg/Qvhqt6KkBvhsfWDNZNL7kDrBteskfoj73UppD+RN2UYwGUzUh0qV81IPEcBm1K9W9iTx1vrUy6sru9W4INrbC8PtblkPFuCTaPxrvqA+Nd8oFeBA==" alt="" data-pagespeed-url-hash="3756334862" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Piqué Biker Jacket</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>$67.24</h5>
+                            <div class="product__color__select">
+                                <label for="pc-1">
+                                    <input type="radio" id="pc-1">
+                                </label>
+                                <label class="active black" for="pc-2">
+                                    <input type="radio" id="pc-2">
+                                </label>
+                                <label class="grey" for="pc-3">
+                                    <input type="radio" id="pc-3">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg" style="background-image: url(&quot;img/product/product-2.jpg&quot;);">
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRvIAAABXRUJQVlA4TOYAAAAvEcADEMeiIG0DJv5d74iIUNu2jZw8ybm/uurIJm3onKR3aCBBdOMUKbnwAbqGCV8gHqjDgugkaYNQ4tDU/yl3+wK9sRcKMKGUAGIk26atebZt27bt9/3zD+UyhYj+E0zSrPkM2AuTUzcMzvphUfUCkddXI7/+Tcc/HsXK7SeJ8TZ1gLb0/9ezgK797cv+uABIlTUAumO900elwnZYU1vm2RqprTpP/MWUuT9zDN4+JabV3oB5efUoGL8CgG0nXOYzBIBzL1wqCtLv7kGwzT7kwLZ8R52bVxClrOPP88WPcvrmwIkkAA==" alt="" data-pagespeed-url-hash="935450538" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                                <li><a href="#"><img src="img/icon/xcompare.png.pagespeed.ic.GK5tdZIxpZ.webp" alt="" data-pagespeed-url-hash="3485206841" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRtQAAABXRUJQVlA4TMgAAAAvDwAEEF8CEIT/bhERDNu2cRw8yb77XtIAFbAAEk6x+0l1EPCaAq/AErsSoNgpSlGHKkBA6YNJUJGSIACHkWSb1jx/6+Hbtm0r/4ieUojo/wQAWn5+uaxKYZyT+9egkG/fr5ZD/DmJAAS6Xx2QtwsJ585Zg/Qvhqt6KkBvhsfWDNZNL7kDrBteskfoj73UppD+RN2UYwGUzUh0qV81IPEcBm1K9W9iTx1vrUy6sru9W4INrbC8PtblkPFuCTaPxrvqA+Nd8oFeBA==" alt="" data-pagespeed-url-hash="3756334862" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Piqué Biker Jacket</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>$67.24</h5>
+                            <div class="product__color__select">
+                                <label for="pc-4">
+                                    <input type="radio" id="pc-4">
+                                </label>
+                                <label class="active black" for="pc-5">
+                                    <input type="radio" id="pc-5">
+                                </label>
+                                <label class="grey" for="pc-6">
+                                    <input type="radio" id="pc-6">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item sale">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg" style="background-image: url(&quot;img/product/product-3.jpg&quot;);">
+                            <span class="label">Sale</span>
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRvIAAABXRUJQVlA4TOYAAAAvEcADEMeiIG0DJv5d74iIUNu2jZw8ybm/uurIJm3onKR3aCBBdOMUKbnwAbqGCV8gHqjDgugkaYNQ4tDU/yl3+wK9sRcKMKGUAGIk26atebZt27bt9/3zD+UyhYj+E0zSrPkM2AuTUzcMzvphUfUCkddXI7/+Tcc/HsXK7SeJ8TZ1gLb0/9ezgK797cv+uABIlTUAumO900elwnZYU1vm2RqprTpP/MWUuT9zDN4+JabV3oB5efUoGL8CgG0nXOYzBIBzL1wqCtLv7kGwzT7kwLZ8R52bVxClrOPP88WPcvrmwIkkAA==" alt="" data-pagespeed-url-hash="935450538" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                                <li><a href="#"><img src="img/icon/xcompare.png.pagespeed.ic.GK5tdZIxpZ.webp" alt="" data-pagespeed-url-hash="3485206841" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRtQAAABXRUJQVlA4TMgAAAAvDwAEEF8CEIT/bhERDNu2cRw8yb77XtIAFbAAEk6x+0l1EPCaAq/AErsSoNgpSlGHKkBA6YNJUJGSIACHkWSb1jx/6+Hbtm0r/4ieUojo/wQAWn5+uaxKYZyT+9egkG/fr5ZD/DmJAAS6Xx2QtwsJ585Zg/Qvhqt6KkBvhsfWDNZNL7kDrBteskfoj73UppD+RN2UYwGUzUh0qV81IPEcBm1K9W9iTx1vrUy6sru9W4INrbC8PtblkPFuCTaPxrvqA+Nd8oFeBA==" alt="" data-pagespeed-url-hash="3756334862" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Multi-pocket Chest Bag</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>$43.48</h5>
+                            <div class="product__color__select">
+                                <label for="pc-7">
+                                    <input type="radio" id="pc-7">
+                                </label>
+                                <label class="active black" for="pc-8">
+                                    <input type="radio" id="pc-8">
+                                </label>
+                                <label class="grey" for="pc-9">
+                                    <input type="radio" id="pc-9">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg" style="background-image: url(&quot;img/product/product-4.jpg&quot;);">
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRvIAAABXRUJQVlA4TOYAAAAvEcADEMeiIG0DJv5d74iIUNu2jZw8ybm/uurIJm3onKR3aCBBdOMUKbnwAbqGCV8gHqjDgugkaYNQ4tDU/yl3+wK9sRcKMKGUAGIk26atebZt27bt9/3zD+UyhYj+E0zSrPkM2AuTUzcMzvphUfUCkddXI7/+Tcc/HsXK7SeJ8TZ1gLb0/9ezgK797cv+uABIlTUAumO900elwnZYU1vm2RqprTpP/MWUuT9zDN4+JabV3oB5efUoGL8CgG0nXOYzBIBzL1wqCtLv7kGwzT7kwLZ8R52bVxClrOPP88WPcvrmwIkkAA==" alt="" data-pagespeed-url-hash="935450538" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                                <li><a href="#"><img src="img/icon/xcompare.png.pagespeed.ic.GK5tdZIxpZ.webp" alt="" data-pagespeed-url-hash="3485206841" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="data:image/webp;base64,UklGRtQAAABXRUJQVlA4TMgAAAAvDwAEEF8CEIT/bhERDNu2cRw8yb77XtIAFbAAEk6x+0l1EPCaAq/AErsSoNgpSlGHKkBA6YNJUJGSIACHkWSb1jx/6+Hbtm0r/4ieUojo/wQAWn5+uaxKYZyT+9egkG/fr5ZD/DmJAAS6Xx2QtwsJ585Zg/Qvhqt6KkBvhsfWDNZNL7kDrBteskfoj73UppD+RN2UYwGUzUh0qV81IPEcBm1K9W9iTx1vrUy6sru9W4INrbC8PtblkPFuCTaPxrvqA+Nd8oFeBA==" alt="" data-pagespeed-url-hash="3756334862" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Diagonal Textured Cap</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <h5>$60.9</h5>
+                            <div class="product__color__select">
+                                <label for="pc-10">
+                                    <input type="radio" id="pc-10">
+                                </label>
+                                <label class="active black" for="pc-11">
+                                    <input type="radio" id="pc-11">
+                                </label>
+                                <label class="grey" for="pc-12">
+                                    <input type="radio" id="pc-12">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
